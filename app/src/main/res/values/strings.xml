@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">剧多影视大全</string>
+    <string name="hot_tv">热门电视剧</string>
+    <string name="hot_movie">热门电影</string>
+    <string name="hot_variety">热门综艺</string>
+    <string name="hot_anime">热门动漫</string>
+    <string name="no_more">没有更多了</string>
+</resources>
