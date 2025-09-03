@@ -1,6 +1,7 @@
 package com.film.television.viewmodel
 
 import androidx.lifecycle.ViewModel
+import com.film.television.BuildConfig
 import com.film.television.model.ConfigQueryBody
 import com.film.television.model.ConfigQueryResp
 import com.film.television.repository.ContentRepository
@@ -15,7 +16,7 @@ class SplashViewModel : ViewModel() {
                 Constants.CONFIG_QUERY,
                 DeviceUtil.getPackageName(),
                 token,
-                ConfigQueryBody.Params(null, DeviceUtil.getSimState(),"1.3.1")
+                ConfigQueryBody.Params(null, DeviceUtil.getSimState(), BuildConfig.VERSION_NAME)
             )
         )
     }
