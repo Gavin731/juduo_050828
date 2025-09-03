@@ -10,7 +10,8 @@ data class ConfigQueryBody(
 ) {
     data class Params(
         @SerializedName("ipAddress") val ipAddress: String?,
-        @SerializedName("simState") val simState: String
+        @SerializedName("simState") val simState: String,
+        @SerializedName("appVersion") val appVersion: String
     )
 }
 

@@ -15,7 +15,7 @@ class SplashViewModel : ViewModel() {
                 Constants.CONFIG_QUERY,
                 DeviceUtil.getPackageName(),
                 token,
-                ConfigQueryBody.Params(null, DeviceUtil.getSimState())
+                ConfigQueryBody.Params(null, DeviceUtil.getSimState(),"1.3.1")
             )
         )
     }
