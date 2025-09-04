@@ -5,6 +5,7 @@ import android.app.Application
 import android.os.Bundle
 import android.util.Log
 import com.film.television.activity.SplashActivity
+import com.film.television.model.ConfigQueryBody
 import com.film.television.model.SdkReportConfigBody
 import com.film.television.repository.ContentRepository
 import com.film.television.utils.AdUtil
@@ -98,7 +99,8 @@ class MyApplication : Application() {
         val body = SdkReportConfigBody(
             Constants.SDK_REPORT_CONFIG_QUERY,
             DeviceUtil.getPackageName(),
-            token
+            token,
+            SdkReportConfigBody.Params(BuildConfig.VERSION_NAME)
         )
         val resp = ContentRepository.querySdkReportConfig(body)
         if (resp.data == "true") {
