@@ -16,6 +16,7 @@ import com.film.television.utils.DeviceUtil
 import com.film.television.utils.RouteUtil
 import com.film.television.utils.TokenUtil
 import com.film.television.utils.UMUtil
+import com.orhanobut.hawk.Hawk
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
@@ -28,6 +29,7 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         INSTANCE = this
+        Hawk.init(this).build();
         UMUtil.preInit(this)
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityCreated(

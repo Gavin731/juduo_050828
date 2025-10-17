@@ -11,6 +11,7 @@ import com.common.wheel.admanager.InformationFlowAdCallback
 import com.common.wheel.admanager.InitCallback
 import com.common.wheel.admanager.OpenScreenAdCallBack
 import com.common.wheel.admanager.RewardAdCallBack
+import com.film.television.BuildConfig
 import com.film.television.R
 import com.film.television.mainScope
 import kotlinx.coroutines.launch
@@ -45,7 +46,7 @@ object AdUtil {
             val publicIp = DeviceUtil.getPublicIp()
             Log.d("lytest", "publicIp: $publicIp")
             DeviceUtil.getOaid(appContext) { oaid ->
-                AdvertisementManager.getInstance().initConfig(oaid, publicIp)
+                AdvertisementManager.getInstance().initConfig(oaid, publicIp, BuildConfig.VERSION_NAME)
             }
         }
     }
